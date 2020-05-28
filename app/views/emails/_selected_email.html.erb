@@ -1,0 +1,10 @@
+<div class="row justify-content-center">
+    <h5><%= email.object %></h5>
+    <div class="card col-10">
+        <%= email.body %>
+    </div>
+    <div>
+        <%= link_to "Supprimer", email_path(email), method: :delete, class:"btn btn-danger btn-sm", remote: true%>
+        <%= link_to "Marquer comme non-lu", emails_path, class:"btn btn-primary btn-sm", remote: true%>
+    </div>
+</div>

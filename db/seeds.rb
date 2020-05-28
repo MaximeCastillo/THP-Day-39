@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# require 'faker'
+require 'faker'
 # 3.times do
 #   my_category = Category.create(title: Faker::Book.genre)
 #   3.times do
@@ -18,11 +18,19 @@
 #   end
 # end
 
-20.times do
-  my_task = Task.new(
-    title: Faker::Book.title,
-    deadline: Faker::Date.forward(23),
-    image: Faker::Avatar.image,
-    category_id: Category.all.sample.id)
-  my_task.save
+# 20.times do
+#   my_task = Task.new(
+#     title: Faker::Book.title,
+#     deadline: Faker::Date.forward(23),
+#     image: Faker::Avatar.image,
+#     category_id: Category.all.sample.id)
+#   my_task.save
+# end
+
+Email.destroy_all
+
+8.times do
+  Email.create!(
+    object: Faker::DcComics.title,
+    body: Faker::Lorem.paragraph(sentence_count: 20))
 end

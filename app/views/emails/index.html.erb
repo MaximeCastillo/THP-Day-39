@@ -1,0 +1,27 @@
+<div class="container">
+
+    <div class="text-center">
+        <h2>Boîte de réception</h2>
+        <%= link_to "Recevoir un email", emails_path, method: :post, class: "btn btn-primary btn-lg", remote: true %>
+    </div>
+
+    <div class="row mt-5">
+     
+        <div class="col-4">
+            <div class="list-group" id="emails-list">
+                <h4>Liste des emails</h4>
+                <% @emails.each do |email| %>
+                    <%= render 'email', email: email %>
+                <% end %>
+            </div>
+        </div>
+
+        <div class="col-8">
+            <h4>Email selectionné</h4>
+            <div class="card" id="selected-email">
+                
+            </div> 
+        </div>
+    </div> 
+
+</div>

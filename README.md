@@ -1,24 +1,17 @@
-# README
+Projet | Gmail-like en AJAX
+--------------------------------------------
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Repository contenant le projet du 39ème jour de The Hacking Project :
 
-Things you may want to cover:
+Un email Viewer, ni plus ni moins qu'une version ultra basique de Gmail. Globalement l'appli affichera une seule et unique page avec 2 colonnes :
 
-* Ruby version
+Une colonne contenant la liste des emails en base ;
+Une colonne affichant le contenu de l'email sur lequel l'utilisateur vient de cliquer.
 
-* System dependencies
+--------------------------------------------
 
-* Configuration
+Version de Ruby : 2.5.1
+Version de Rails : 5.2.1
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+--------------------------------------------
+Auteur : Maxime CASTILLO

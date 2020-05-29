@@ -8,6 +8,8 @@ Un email Viewer, ni plus ni moins qu'une version ultra basique de Gmail. Globale
 Une colonne contenant la liste des emails en base ;
 Une colonne affichant le contenu de l'email sur lequel l'utilisateur vient de cliquer.
 
+Lien vers la version en production : https://gmail-like-in-ajax.herokuapp.com/
+
 --------------------------------------------
 
 Version de Ruby : 2.5.1

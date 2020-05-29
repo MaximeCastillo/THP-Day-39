@@ -6,7 +6,8 @@ class EmailsController < ApplicationController
   def create
     @email = Email.new(
       object: Faker::DcComics.title,
-      body: Faker::Lorem.paragraph(sentence_count: 20))
+      body: Faker::Lorem.paragraph(sentence_count: 20),
+      read: false)
     if @email.save
       respond_to do |format|
         format.html { redirect_to root_path }
@@ -24,6 +25,8 @@ class EmailsController < ApplicationController
 
   def show
     @email = Email.find(params[:id])
+    @email.read = true
+    @email.save
     respond_to do |format|
       format.html { redirect_to root_path }
       format.js { }
@@ -37,5 +40,21 @@ class EmailsController < ApplicationController
       format.html { redirect_to root_path }
       format.js { }
     end
+  end
+
+  def update
+    @email = Email.find(params[:id])
+    @email.read = false
+    @email.save
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.js { }
+    end
+  end
+
+  private
+
+  def email_params
+    params.permit(:read)
   end
 end

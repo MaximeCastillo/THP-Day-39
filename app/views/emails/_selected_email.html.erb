@@ -5,6 +5,6 @@
     </div>
     <div>
         <%= link_to "Supprimer", email_path(email), method: :delete, class:"btn btn-danger btn-sm", remote: true%>
-        <%= link_to "Marquer comme non-lu", emails_path, class:"btn btn-primary btn-sm", remote: true%>
+        <%= link_to "Marquer comme non-lu", email_path(email), method: :put, class:"btn btn-primary btn-sm", remote: true%>
     </div>
 </div>

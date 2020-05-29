@@ -1,1 +1,5 @@
-<%= link_to email.object, email_path(email), id: email.id, class:"list-group-item list-group-item-action", remote: true%>
+<% if email.read == false %>
+    <%= link_to email.object, email_path(email), id: email.id, class:"list-group-item list-group-item-action", remote: true%>
+<% else %>
+    <%= link_to email.object, email_path(email), id: email.id, class:"list-group-item list-group-item-action email-is-read", remote: true%>
+<% end %>

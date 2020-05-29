@@ -32,5 +32,6 @@ Email.destroy_all
 8.times do
   Email.create!(
     object: Faker::DcComics.title,
-    body: Faker::Lorem.paragraph(sentence_count: 20))
+    body: Faker::Lorem.paragraph(sentence_count: 20),
+    read: false)
 end
